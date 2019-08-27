@@ -1,0 +1,7 @@
+.mainmenu {
+    /* overflow: hidden; */
+    /* position: fixed; */
+}
+nav ul li {
+    font-size: 20px !important;
+}
