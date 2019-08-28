@@ -1,21 +1,23 @@
 import React from "react";
 import Navbar from "./components/navbar_menu/navbar";
 import DashBoard from "./components/dashboard/DashBoard";
-import {BrowserRouter,Switch,Route} from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import About from "./components/about/about";
 import Location from "./components/locations/location";
+import Hotel from "./components/hotel/hotel";
 function App() {
     return (
-        <div>
-            <Navbar></Navbar>
-            <BrowserRouter>
+        <BrowserRouter>
+            <div>
+                <Navbar/>
                 <Switch>
-                    <Route path="/" component={DashBoard}></Route>                
-                    <Route path="/about" component={About}></Route>
-                    <Route path="/location" component={Location}></Route>
+                    <Route exact path="/"  component={DashBoard}></Route>
+                    <Route path="/about"  component={About}></Route>
+                    <Route path="/hotel"  component={Hotel}></Route>
+                    <Route path="/location"  component={Location}></Route>
                 </Switch>
-            </BrowserRouter>
-        </div>
+            </div>
+        </BrowserRouter>
     );
 }
 export default App;

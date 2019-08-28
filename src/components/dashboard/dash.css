@@ -1,12 +1,11 @@
 div.mani-cont {
-    background-image: url('../img/ressort2.jpg');
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    background-repeat: no-repeat;
-    width:100%;
-    height: 60%;
-    
+  background-image: url("../img/ressort2.jpg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60%;
 }
 .text-block {
   position: absolute;
@@ -18,8 +17,9 @@ div.mani-cont {
   color: #f1f1f1;
   width: 60%;
   height: 35%;
-  }
-.text-block p,h3 {
-    padding: 15px;
-    font-size: 18px;
+}
+.text-block p,
+h3 {
+  padding: 15px;
+  font-size: 18px;
 }
