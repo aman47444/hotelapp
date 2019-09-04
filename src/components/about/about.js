@@ -1,7 +1,7 @@
 import React from 'react'
 function About() {
     return (
-        <div className="container-fluid">
+        <div>
             <h1>This is About Page</h1>
         </div>
     )

@@ -1,7 +1,17 @@
-.mainmenu {
-    /* overflow: hidden; */
-    /* position: fixed; */
+div.mainmenu {
+    background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 99;
 }
 nav ul li {
-    font-size: 20px !important;
+  font-size: 20px !important;
+}
+img {
+  margin: 0px;
+  padding: 0px;
+  width: 150px;
+  height: 80px;
+  /* border: 1px solid black; */
 }
