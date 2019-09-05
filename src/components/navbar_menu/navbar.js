@@ -15,7 +15,10 @@ class Navbar extends Component {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav mr-auto">                            
+                        <ul className="navbar-nav mr-auto">
+                            <li className="nav-item active">
+                                <Link className="nav-link " to="/">Home</Link>
+                            </li>                            
                             <li className="nav-item active">
                                 <Link className="nav-link " to="/hotel">Hotel</Link>
                             </li>
@@ -34,7 +37,7 @@ class Navbar extends Component {
                             <button className="btn btn-success my-2 my-sm-0" type="submit">Search</button>
                         </form>
                         <div className="">
-                            <Link className="btn btn-danger" to="/login">LogIn</Link>
+                            <Link className="btn btn-danger mx-1" to="/login">LogIn</Link>
                             {/* <Link className="btn btn-danger mx-2" to="/signup">SignUp</Link> */}
                         </div>
                     </div>
