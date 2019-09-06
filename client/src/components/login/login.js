@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 class Login extends Component {
+    constructor() {
+        
+    }
     render() {
         return (
             <div className="container login_form">
