@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 class Login extends Component {
+    
     render() {
         return (
             <div className="container login_form">
@@ -16,6 +17,7 @@ class Login extends Component {
                         <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                         <label className="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
+                    <button type="submit" className="btn btn-success">Submit</button>
                     <button type="submit" className="btn btn-success">Submit</button>
                 </form>
             </div>
