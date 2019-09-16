@@ -7,6 +7,7 @@ import Location from "./components/locations/location";
 import Hotel from "./components/hotel/hotel";
 import Login from "./components/login/login";
 import Facalities from "./components/facalities/facalities";
+import Signup from "./components/signup/signup";
 function App() {
     return (
         <BrowserRouter>
@@ -19,6 +20,7 @@ function App() {
                     <Route path="/hotel"  component={Hotel}></Route>
                     <Route path="/location"  component={Location}></Route>
                     <Route path="/login"  component={Login}></Route>
+                    <Route path="/signup"  component={Signup}></Route>
                 </Switch>
             </div>
         </BrowserRouter>

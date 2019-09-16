@@ -13,8 +13,7 @@ const url = "mongodb://localhost/mydb";
 const PORT = 8080;
 mongoose.connect(url, { useNewUrlParser: true }, function (err, db) {
     if (err) throw err;
-    console.log("Databese se connect ho gya");
-    // console.log(db);
+    console.log("Aman Bhai Databese se connect ho gya");
 });
 app.post("/login", function (req, res) {
     console.log(req.body);
@@ -24,6 +23,16 @@ app.post("/login", function (req, res) {
         console.log('LoggedIn')
         res.send(" data is " + data);
     });
+});
+app.get('/api',(req,res) => {
+    res.json({
+        message:"Welcome to api"
+    })
+});
+app.get('',(req,res) => {
+    res.json({
+        message:"Welcome to api world"
+    })
 });
 app.listen(PORT, function () {
     console.log("Server will listen now " + PORT);

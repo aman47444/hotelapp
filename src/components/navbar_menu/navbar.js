@@ -38,7 +38,6 @@ class Navbar extends Component {
                         </form>
                         <div className="">
                             <Link className="btn btn-danger mx-1" to="/login">LogIn</Link>
-                            {/* <Link className="btn btn-danger mx-2" to="/signup">SignUp</Link> */}
                         </div>
                     </div>
                 </nav>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+import Axios from 'axios'
+import { Link } from 'react-router-dom'
+import Signup from '../signup/signup'
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -16,10 +18,10 @@ class Login extends Component {
             'password': password
         }
         console.log(bodydata);
-        axios.post('/login', bodydata)
+        Axios.post('http://localhost:8080/login', { bodydata })
             .then(res => console.log(res.status))
-            .then(data => console.log(data));
-
+            .then(data => console.log(data))
+            .catch((err) => console.log("not found"));
     }
     render() {
         return (
@@ -37,7 +39,10 @@ class Login extends Component {
                         <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                         <label className="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
-                    <button type="submit" className="btn btn-success">Submit</button>
+                    <div className="my-3">
+                        <button type="submit" className="btn btn-success">Submit</button>
+                        <Link to="/signup"><button type="submit" className="btn btn-danger mx-3">Signup</button></Link>
+                    </div>
                 </form>
             </div>
         )
