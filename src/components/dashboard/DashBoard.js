@@ -11,7 +11,7 @@ class DashBoard extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="container-fluid">
+                <div className="container-fluid my-3">
                     <div className="container">
                         <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                             <ol className="carousel-indicators">

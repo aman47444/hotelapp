@@ -6,34 +6,49 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: '', password: ''
+            email: '', 
+            password: '',
+            submitted: false,
+            loading: false,
+            error: ''
         }
+    }
+    onChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value })
     }
     onSubmit = (e) => {
         e.preventDefault();
-        let username = e.target.username.value;
+        let email = e.target.email.value;
         let password = e.target.password.value;
         let bodydata = {
-            'username': username,
+            'email': email,
             'password': password
         }
+        // const bodydata = {
+        //     email:this.state.email,
+        //     password:this.state.password
+        // }
         console.log(bodydata);
         Axios.post('http://localhost:8080/login', { bodydata })
-            .then(res => console.log(res.status))
-            .then(data => console.log(data))
+            // .then(res => console.log('ye hai status -> ' + res.status + '\n' +res.data))
+            .then(res => {
+                if(res) {
+                    this.props.history.push('/')
+                }
+            })
             .catch((err) => console.log("not found"));
     }
     render() {
         return (
-            <div className="container login_form">
+            <div className="container my-5 login_form">
                 <form className="" method="POST" onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="text" name="username" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username" />
+                        <input type="text" name="email" className="form-control" id="exampleInputEmail1" placeholder="Enter Username" onChange={this.handleChange}/>
                     </div>
                     <div className="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" name="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                        <input type="password" name="password" className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={this.handleChange}/>
                     </div>
                     <div className="form-check">
                         <input type="checkbox" className="form-check-input" id="exampleCheck1" />

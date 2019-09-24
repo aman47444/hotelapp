@@ -8,11 +8,13 @@ import Hotel from "./components/hotel/hotel";
 import Login from "./components/login/login";
 import Facalities from "./components/facalities/facalities";
 import Signup from "./components/signup/signup";
+import Profile from "./components/profile/profile";
 function App() {
     return (
         <BrowserRouter>
             <div>
                 <Navbar/>
+                {/* <Profile></Profile> */}
                 <Switch>
                     <Route exact path="/"  component={DashBoard}></Route>
                     <Route path="/about"  component={About}></Route>

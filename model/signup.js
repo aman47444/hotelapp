@@ -7,9 +7,6 @@ var userScheama = new Schema({
     lname:{
         type:String
     },
-    username:{
-        type:String
-    },
     email:{
         type:String
     },
@@ -20,5 +17,5 @@ var userScheama = new Schema({
         type:Number
     }
 })
-const User = mongoose.model('User',userScheama);
-module.exports = User;
+const Users = mongoose.model('User',userScheama);
+module.exports = Users;

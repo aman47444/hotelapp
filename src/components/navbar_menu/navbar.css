@@ -1,9 +1,10 @@
 div.mainmenu {
-    background-color: white;
+  background-color: white;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 99;
+  border-bottom: 1px solid rgb(53, 53, 216);
 }
 nav ul li {
   font-size: 20px !important;
